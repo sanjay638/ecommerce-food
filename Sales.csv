@@ -1,0 +1,100 @@
+Customer type,Gender,Product line,price,Quantity,Tax 5%,Total,Rating
+Member,Female,Health and beauty,74.69,7,26.1415,548.9715,9.1
+Normal,Female,Electronic accessories,15.28,5,3.82,80.22,9.6
+Normal,Male,Home and lifestyle,46.33,7,16.2155,340.5255,7.4
+Member,Male,Health and beauty,58.22,8,23.288,489.048,8.4
+Normal,Male,Sports and travel,86.31,7,30.2085,634.3785,5.3
+Normal,Male,Electronic accessories,85.39,7,29.8865,627.6165,4.1
+Member,Female,Electronic accessories,68.84,6,20.652,433.692,5.8
+Normal,Female,Home and lifestyle,73.56,10,36.78,772.38,8
+Member,Female,Health and beauty,36.26,2,3.626,76.146,7.2
+Member,Female,Food and beverages,54.84,3,8.226,172.746,5.9
+Member,Female,Fashion accessories,14.48,4,2.896,60.816,4.5
+Member,Male,Electronic accessories,25.51,4,5.102,107.142,6.8
+Normal,Female,Electronic accessories,46.95,5,11.7375,246.4875,7.1
+Normal,Male,Food and beverages,43.19,10,21.595,453.495,8.2
+Normal,Female,Health and beauty,71.38,10,35.69,749.49,5.7
+Member,Female,Sports and travel,93.72,6,28.116,590.436,4.5
+Member,Female,Health and beauty,68.93,7,24.1255,506.6355,4.6
+Normal,Male,Sports and travel,72.61,6,21.783,457.443,6.9
+Normal,Male,Food and beverages,54.67,3,8.2005,172.2105,8.6
+Normal,Female,Home and lifestyle,40.3,2,4.03,84.63,4.4
+Member,Male,Electronic accessories,86.04,5,21.51,451.71,4.8
+Normal,Male,Health and beauty,87.98,3,13.197,277.137,5.1
+Normal,Male,Home and lifestyle,33.2,2,3.32,69.72,4.4
+Normal,Male,Electronic accessories,34.56,5,8.64,181.44,9.9
+Member,Male,Sports and travel,88.63,3,13.2945,279.1845,6
+Member,Female,Home and lifestyle,52.59,8,21.036,441.756,8.5
+Normal,Male,Fashion accessories,33.52,1,1.676,35.196,6.7
+Normal,Female,Fashion accessories,87.67,2,8.767,184.107,7.7
+Normal,Female,Food and beverages,88.36,5,22.09,463.89,9.6
+Normal,Male,Health and beauty,24.89,9,11.2005,235.2105,7.4
+Normal,Male,Fashion accessories,94.13,5,23.5325,494.1825,4.8
+Member,Male,Sports and travel,78.07,9,35.1315,737.7615,4.5
+Normal,Male,Sports and travel,83.78,8,33.512,703.752,5.1
+Normal,Male,Health and beauty,96.58,2,9.658,202.818,5.1
+Member,Female,Food and beverages,99.42,4,19.884,417.564,7.5
+Member,Female,Sports and travel,68.12,1,3.406,71.526,6.8
+Member,Male,Sports and travel,62.62,5,15.655,328.755,7
+Normal,Female,Electronic accessories,60.88,9,27.396,575.316,4.7
+Normal,Female,Health and beauty,54.92,8,21.968,461.328,7.6
+Member,Male,Home and lifestyle,30.12,8,12.048,253.008,7.7
+Member,Female,Home and lifestyle,86.72,1,4.336,91.056,7.9
+Member,Male,Home and lifestyle,56.11,2,5.611,117.831,6.3
+Member,Female,Sports and travel,69.12,6,20.736,435.456,5.6
+Member,Female,Food and beverages,98.7,8,39.48,829.08,7.6
+Member,Male,Health and beauty,15.37,2,1.537,32.277,7.2
+Member,Female,Electronic accessories,93.96,4,18.792,394.632,9.5
+Member,Male,Health and beauty,56.69,9,25.5105,535.7205,8.4
+Member,Female,Food and beverages,20.01,9,9.0045,189.0945,4.1
+Member,Male,Electronic accessories,18.93,6,5.679,119.259,8.1
+Member,Female,Fashion accessories,82.63,10,41.315,867.615,7.9
+Member,Male,Food and beverages,91.4,7,31.99,671.79,9.5
+Member,Female,Food and beverages,44.59,5,11.1475,234.0975,8.5
+Member,Female,Fashion accessories,17.87,4,3.574,75.054,6.5
+Member,Male,Fashion accessories,15.43,1,0.7715,16.2015,6.1
+Normal,Male,Home and lifestyle,16.16,2,1.616,33.936,6.5
+Normal,Female,Electronic accessories,85.98,8,34.392,722.232,8.2
+Member,Male,Home and lifestyle,44.34,2,4.434,93.114,5.8
+Normal,Male,Health and beauty,89.6,8,35.84,752.64,6.6
+Member,Female,Home and lifestyle,72.35,10,36.175,759.675,5.4
+Normal,Male,Electronic accessories,30.61,6,9.183,192.843,9.3
+Member,Female,Sports and travel,24.74,3,3.711,77.931,10
+Normal,Male,Home and lifestyle,55.73,6,16.719,351.099,7
+Member,Female,Sports and travel,55.07,9,24.7815,520.4115,10
+Member,Male,Sports and travel,15.81,10,7.905,166.005,8.6
+Member,Male,Health and beauty,75.74,4,15.148,318.108,7.6
+Member,Male,Health and beauty,15.87,10,7.935,166.635,5.8
+Normal,Female,Health and beauty,33.47,2,3.347,70.287,6.7
+Member,Female,Fashion accessories,97.61,6,29.283,614.943,9.9
+Normal,Male,Sports and travel,78.77,10,39.385,827.085,6.4
+Member,Female,Health and beauty,18.33,1,0.9165,19.2465,4.3
+Normal,Male,Food and beverages,89.48,10,44.74,939.54,9.6
+Normal,Male,Fashion accessories,62.12,10,31.06,652.26,5.9
+Member,Female,Food and beverages,48.52,3,7.278,152.838,4
+Normal,Female,Electronic accessories,75.91,6,22.773,478.233,8.7
+Normal,Male,Home and lifestyle,74.67,9,33.6015,705.6315,9.4
+Normal,Female,Electronic accessories,41.65,10,20.825,437.325,5.4
+Member,Male,Fashion accessories,49.04,9,22.068,463.428,8.6
+Member,Female,Fashion accessories,20.01,9,9.0045,189.0945,5.7
+Member,Female,Food and beverages,78.31,10,39.155,822.255,6.6
+Normal,Female,Health and beauty,20.38,5,5.095,106.995,6
+Normal,Female,Health and beauty,99.19,6,29.757,624.897,5.5
+Normal,Female,Food and beverages,96.68,3,14.502,304.542,6.4
+Normal,Male,Food and beverages,19.25,8,7.7,161.7,6.6
+Member,Female,Food and beverages,80.36,4,16.072,337.512,8.3
+Member,Male,Sports and travel,48.91,5,12.2275,256.7775,6.6
+Normal,Female,Sports and travel,83.06,7,29.071,610.491,4
+Normal,Male,Fashion accessories,76.52,5,19.13,401.73,9.9
+Member,Male,Food and beverages,49.38,7,17.283,362.943,7.3
+Normal,Male,Sports and travel,42.47,1,2.1235,44.5935,5.7
+Normal,Female,Health and beauty,76.99,6,23.097,485.037,6.1
+Member,Female,Home and lifestyle,47.38,4,9.476,198.996,7.1
+Normal,Female,Sports and travel,44.86,10,22.43,471.03,8.2
+Member,Female,Sports and travel,21.98,7,7.693,161.553,5.1
+Member,Male,Health and beauty,64.36,9,28.962,608.202,8.6
+Normal,Male,Health and beauty,89.75,1,4.4875,94.2375,6.6
+Normal,Male,Electronic accessories,97.16,1,4.858,102.018,7.2
+Normal,Male,Health and beauty,87.87,10,43.935,922.635,5.1
+Normal,Female,Electronic accessories,12.45,6,3.735,78.435,4.1
+Normal,Male,Food and beverages,52.75,3,7.9125,166.1625,9.3

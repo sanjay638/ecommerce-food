@@ -1,0 +1,9 @@
+Ecommerce
+
+Run the server-python manage.py runserver --nothreading
+--noreload
+
+Admin page
+
+user:admin
+pwd:admin
