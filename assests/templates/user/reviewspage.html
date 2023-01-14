@@ -1,0 +1,61 @@
+{% extends 'user/userdetails.html' %}
+{% block userblock %}
+{% load static %}
+
+<style>
+    .new1{
+      background: url("{% static 'foodbg2.jpg' %}")no-repeat;
+      /*background-size: 100% 100%;*/
+      background-size: cover;
+      height: 100vh;
+      background-position: 50% 50%;
+      width: 100%;
+      background-attachment: ;
+  }
+  .con{
+    max-width: 64em;
+     margin: auto;
+    
+  }
+  </style>
+
+<body>
+    <section class="new1">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="container">
+            <div class="row">
+              <div class="col-md-12 text-center">
+                <h1 style="color: rgb(78, 4, 45);">Review Details</h1>
+                
+                <hr>
+                </div>
+                </div>
+
+    <div class="viewdetails" >  
+        <table class="table table-hover">
+            <tr>
+                <th scope="col">User Name</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Ratings</th>
+                <th scope="col">FeedBack</th>            
+            </tr>
+            
+            <tbody>
+                {% for o in objects %}
+                <tr>
+                    <td>{{o.name}}</td>
+                    <td>{{o.productname}}</td>
+                    <td>{{o.ratings}}</td>
+                    <td>{{o.feedback}}</td>
+                </tr>
+                {% endfor %}              
+            </tbody>
+          </table>
+    </div>
+    </form>
+</section>
+</body>
+{% endblock %}
+
+

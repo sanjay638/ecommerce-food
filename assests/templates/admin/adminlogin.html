@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ecommerce Food Products Sales Forecasting System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+    <style>
+      #intro {
+        background-image: url("{% static 'foodbg1.jpg' %}");
+        height: 100vmin
+      }
+
+      /* Height for devices larger than 576px */
+      @media (min-width: 992px) {
+        #intro {
+          margin-top: -58.59px;
+        }
+      }
+
+      .navbar .nav-link {
+        color: #fff !important;
+      }
+    </style>
+
+    <style>
+      .navbar{
+              margin-bottom: 0px;
+          }
+    
+    textarea{
+      border-radius:40px;
+      box-shadow: 0px 0px 10px rebeccapurple;
+    }
+    select{
+      border-radius:40px;
+      height:40px;
+      width:200px;
+      box-shadow: 0px 0px 10px rebeccapurple;
+    }
+    
+    
+</style>
+<style>
+  body {
+      font-family: Arial black;
+      background-color: black;
+      /*background-image: url("{% static 'reviews.png' %}");*/
+    }
+    
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+    background-color: white;
+  }
+  
+  /* Full-width input fields */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Overwrite default styles of hr */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  
+  /* Set a style for the submit button */
+  .loginbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  .loginbtn:hover {
+    opacity: 1;
+  }
+  
+  /* Add a blue text color to links */
+  a {
+    color: dodgerblue;
+  }
+  
+  /* Set a grey background color and center the text of the "sign in" section */
+  .signin {
+    background-color: #f1f1f1;
+    text-align: center;
+  }
+  </style>
+</head>
+<body >
+<nav class="navbar navbar-default" style="background-color: aqua;">
+  <div class="container-fluid">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNav">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          
+      </div>
+      <div class="collapse navbar-collapse" id="myNav">
+          <ul class="nav navbar-nav">
+              <li><a href="/">Home</a></li>
+              <li><a href="/">Register</a></li>
+              <li><a href="http://127.0.0.1:8000/userlogin/">Store</a></li>
+              <li><a href="http://127.0.0.1:8000/contactus/">Contact Us</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://127.0.0.1:8000/userlogin/"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                               
+          </ul>
+      </div>
+  </div>
+</nav>
+
+<div class="jumbotro text-center">
+<h1 style="color: darkorange ;">Ecommerce Food Products Sales Forecasting System</h1>
+<p style="font-size:40px;color: aqua;">Admin Login</p>
+</div><br>
+<br>
+
+<form weidth="50" method="POST" >
+{% csrf_token %}
+<div id="intro" class="bg-image shadow-2-strong">
+  <div class="mask d-flex align-items-center h-100" ><br><br><br><br>
+<div class="container">
+  <h1>Admin Login</h1>
+  <p>Please fill to login an account.</p>
+  <hr>
+
+  <label for="email"><b>User Name</b></label>
+  <input type="text" placeholder="Enter User Name" name="username" id="email"  required>
+
+  <label for="psw"><b>Password</b></label>
+  <input type="password" placeholder="Enter Password" name="password" id="psw"  required>
+
+  
+
+  <button type="submit" class="loginbtn">Admin Login</button>
+
+</div>
+<div class="container signin">
+  <p>You Don't have any account? Please Register. <a href="http://127.0.0.1:8000/adminregister/">Register</a>.</p>
+</div>
+</div>
+
+</form>
+
+
+<script>
+(function(){
+        var imgLen = document.getElementById('imgGallary');
+        var images = imgLen.getElementsByTagName('img');
+        var counter = 1;
+
+        if(counter <= images.length){
+            setInterval(function(){
+                images[0].src = images[counter].src;
+                console.log(images[counter].src);
+                counter++;
+
+                if(counter === images.length){
+                    counter = 1;
+                }
+            },4000);
+        }
+})();
+</script>
+</body>
+</html>

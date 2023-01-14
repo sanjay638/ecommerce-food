@@ -1,0 +1,97 @@
+{% extends 'user/userdetails.html' %}
+{% block userblock %}
+{% load static %}
+
+<style>
+  .new1{
+    background: url("{% static '27.jpg' %}")no-repeat;
+    /*background-size: 100% 100%;*/
+    background-size: cover;
+    height: 100vh;
+    background-position: 50% 50%;
+    width: 100%;
+    background-attachment: ;
+}
+.con{
+  max-width: 64em;
+   margin: auto;
+  
+}
+
+
+</style>
+
+
+<body>
+  <section class="new1">
+  <div class="m-2">
+<form class="con"  method="POST" >
+    {% csrf_token %}
+       <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1 style="color: rgb(81, 255, 0);">Customer Details</h1>
+            
+            <hr>
+            </div>
+            </div>
+
+          <div class="row mb-3">
+             <label style="color: rgb(248,26,92); font-family: arial black;" class="col-form-label col-sm-1">Name:</label>
+             <div class="col-sm-4">
+                  <input type="text" class="form-control" value="{{object.firstname}}" readonly>
+              </div>
+           </div>
+    
+          <div class="row mb-3">
+            <label style="color: rgb(248,26,92);font-family: arial black;" class="col-form-label col-sm-1">Email Id:</label>
+            <div class="col-sm-4">
+                <input type="email" class="form-control" value="{{object.email}}" readonly>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <label style="color: rgb(248,26,92); font-family: arial black;" class="col-form-label col-sm-1">Password:</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" value="{{object.password}}" readonly>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <label style="color: rgb(248,26,92); font-family: arial black;" class="col-form-label col-sm-1">Mobile Number:</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" value="{{object.mobilenumber}}" readonly>
+            </div>
+          </div>
+          
+          <div class="row mb-3">
+            <label style="color: rgb(248,26,92);font-weight: 100; font-family: arial black;" class="col-form-label col-sm-1">DOB:</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" value="{{object.dob}}" readonly>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <label style="color: rgb(248,26,92); font-family: arial black;" class="col-form-label col-sm-1">Gender:</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" value="{{object.gender}}" readonly>
+            </div>
+          </div>
+
+          <div class="row mb-3">
+            <label style="color: rgb(248,26,92); font-family: arial black;" for="inputEmail" class="col-form-label col-sm-1">Address:</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" value="{{object.address}}" readonly>
+            </div>
+          </div>
+
+             
+        </div>
+</form>
+</div>
+</section>
+</body>
+{% endblock %}
+
+
+

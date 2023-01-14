@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@300&family=Rubik:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/c26cd2166c.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+
+    <title>Ecommerce Food Products Sales Forecasting System</title>
+    
+    <style>
+      *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.navbar-brand{
+  font-size: 2rem;
+  color: black;
+  font-family: 'Lobster', cursive;
+}
+.navbar-brand:hover{
+  color: black;
+}
+.nav-link{
+  margin-right: 10px;
+  margin-left: 10px;
+  color: black;
+  font-family: 'Rubik', sans-serif;
+  text-transform: uppercase;
+  
+}
+.nav-link:hover{
+  color: black;
+}
+.search{
+  height: 40px;
+  width: 80%;
+  border-radius:60px;
+  outline: none;
+  margin-right: -35px;
+  font-family: 'Rubik', sans-serif;
+  border: 2px solid rgb(248,26,92);
+}
+.btn0{
+  height: 40px;
+  width: 40%;
+  outline: none;
+  border: none;
+  background-color: rgb(248,26,92);
+  color: white;
+  border-radius: 60px;
+  font-weight: 700;
+}
+.main{
+  background-image:"{% static 'foodbg3.webp' %}" ;
+  background : url("{% static 'foodbg3.webp' %}")no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: 50% 50%;
+  width: 100%;
+}
+.main h1{
+  font-size: 4rem;
+  font-weight: 700;    
+}
+.btn1{
+  height: 45px;
+  width: 35%;
+  border: none;
+  outline: none;
+  background-color: rgb(248,26,92);
+  color: white;
+  font-weight: 700;
+  border-radius: 60px;
+}
+.btn1:hover{
+  background-color: rgb(223,15,77);
+  transition: 0.5s;
+}
+h1{
+  font-weight: 700;
+}
+.card:hover{
+  box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
+-webkit-box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px -1px 25px -4px rgba(0,0,0,0.75);
+transition: 0.5s;
+}
+.apple{
+  background:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url("{% static '22.jpg' %}")no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: 50% 50%;
+  width: 100%;
+}
+.apple h1{
+  font-family: 'Lobster', cursive;
+}
+.news{
+  background-color: black;
+  color: white;
+}
+.btn2{
+  height: 45px;
+  width: 100px;
+  background: white;
+  margin-left: -10px;
+  border: 2px solid white;
+  font-weight: 600;
+}
+.news input{
+  height: 45px;
+  width: 55%;
+  border: 2px solid white;
+  outline: none;
+  background: black;
+  color: white;
+  margin-top: 20px;
+  font-weight: 600;
+}
+.news::placeholder{
+  color: white;
+}
+.news p{
+  margin: 0;
+}
+.fab{
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding-right: 5px;
+}
+
+#mainholder1{
+   
+   background-repeat:no-repeat;
+   background-size:cover;
+   background-attachment:fixed;
+   height:500px;
+   position:relative;
+          top:5px;
+          left:50px;
+          z-index:999;
+}
+
+@media (max-width: 979px) {
+   body {
+      padding-left:0 !important;
+      padding-right:0 !important;
+   }
+   
+   .navbar-fixed-top {
+      margin-bottom:0px !important;
+   }
+
+}
+
+
+  </style>  
+</head>
+<body>
+{% csrf_token %}
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">Organic</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i class="fas fa-hamburger"></i></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav m-auto my-2 my-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'uploadpage' %}">Post the Food Products </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'updatefood' %}">Food Update</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'viewfeedback' %}">View User Reviews</a>                
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'customerdetails' %}">Customer Details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'foodchart' 'bar' %}">Food Chart</a>
+        </li>               
+      </ul>
+      <ul class="navbar-nav m-auto my-2 my-lg-0">
+        <li class="fa fa-sign-out text-center" style="font-size:15px; text-align: left;" ><a class="nav-link"  href="http://127.0.0.1:8000/"> LogOut</a></li><br>        
+    </ul>      
+    </div>
+  </div>
+</nav>     
+
+<div id="mainholder1">
+{% block adminblock %}
+{% endblock %}
+</div>
+</body>
+</html>
+
+

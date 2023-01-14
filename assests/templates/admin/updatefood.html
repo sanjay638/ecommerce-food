@@ -1,0 +1,28 @@
+{% extends 'admin/designadmin.html' %}
+{% block adminblock %}
+{% load static %}
+
+<div class="container ">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1>Our Products</h1>
+        <h6 style="color: red;">Be Healthy Organic Food</h6>
+        <hr>
+       <div class="row">
+        {% for v in objects %}
+        <div class="col-md-3 py-3">
+          <div class="card">                
+            <div class="card-body">
+              <div class="objects-image">
+                <img src="{{v.uploadimage.url}}" alt="objects image" class="w-100"> 
+              </div>
+              <h4>Id={{v.Productid}}</h4>
+              <h5>{{v.Productname}}</h5> 
+            </div>                           
+          </div>
+        </div>
+        {% endfor %}
+      </div> 
+    </div>
+  </div>
+{% endblock %}

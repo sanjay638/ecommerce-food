@@ -1,0 +1,79 @@
+{% extends 'user/userdetails.html' %}
+{% block userblock %}
+{% load static %}
+
+<style>
+    .new1{
+      background: url("{% static '30.jpg' %}")no-repeat;
+      /*background-size: 100% 100%;*/
+      background-size: cover;
+      height: 100vh;
+      background-position: 50% 50%;
+      width: 100%;
+      background-attachment: ;
+  }
+  .con{
+    max-width: 100em;
+     margin: auto;
+    
+  }
+  </style>
+
+<section class="new1">
+<form method="POST">
+    {% csrf_token %}
+    <div class="con">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1 style="color: rgb(78, 4, 45);">Product Details</h1>
+            
+            <hr>
+            </div>
+            </div>
+
+<div class="viewdetails" >
+    <table id="myTable" class="table table-hover">
+        <tr>
+            <th scope="col">Product Name</th>
+            <th scope="col">Product Id</th>
+            <th scope="col">Quantity(Kg)</th>
+            <th scope="col">Product Image</th>
+            <th scope="col">Gram</th>
+            <th scope="col">Description</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Quantity(Kg)</th>
+            <th scope="col">Day</th>
+            <th scope="col">Month</th>
+            <th scope="col">Year</th>
+            <th scope="col">Order</th>
+            <th scope="col">All Details</th>            
+        </tr>
+        
+        <tbody>
+            
+            <tr>
+                <td>{{v.Productname}}</td>
+                <td>{{v.Productid}}</td>
+                <td>{{v.Quality}}</td>
+                <td><img src="{{v.uploadimage.url}}" style="width:200px; height:100px; "></td>
+                <td>{{v.gram}}</td>
+                <td>{{v.Description}}</td>
+                <td>{{v.amount}}</td>
+                <td><input type="text" size="4" name="Quality" class="Quality"></td>
+                <td><input type="text" size="4" name="day" class="day"></td>
+                <td><input type="text" size="4" name="month" class="month"></td>
+                <td><input type="text" size="4" name="year" class="year"></td>
+                <td><input type="submit" name="" class="log"></td>
+                <td><a href="{% url 'addtocard' v.id %}">Order your Product details </a> </td>
+            </tr>
+            
+          
+        </tbody>
+      </table>
+</div>
+</form>
+</section>
+{% endblock %}
+
+
+

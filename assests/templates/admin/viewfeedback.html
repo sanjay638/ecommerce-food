@@ -1,0 +1,31 @@
+{% extends 'admin/designadmin.html' %}
+{% block adminblock %}
+{% load static %}
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        <div class="container">
+    <div class="viewdetails" >  
+        <table class="table table-hover">
+            <tr>
+                <th scope="col">User Name</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Ratings</th>
+                <th scope="col">FeedBack</th>            
+            </tr>
+            
+            <tbody>
+                {% for o in objects %}
+                <tr>
+                    <td>{{o.name}}</td>
+                    <td>{{o.productname}}</td>
+                    <td>{{o.ratings}}</td>
+                    <td>{{o.feedback}}</td>
+                </tr>
+                {% endfor %}              
+            </tbody>
+          </table>
+    </div>
+    </form>
+</body>
+{% endblock %}

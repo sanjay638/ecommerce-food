@@ -1,0 +1,99 @@
+{% extends 'admin/designadmin.html' %}
+{% block adminblock %}
+{% load static %}
+<style>
+
+
+  .upload{
+  position: absolute;
+  top:10px;
+  margin-left:150px;
+  padding:30px;
+  width:900px;
+  height: 400px;
+  
+}
+
+.upload table{
+         width:30em;
+         text-align:center;
+         border-collapse: separate;
+         border-spacing:20px;
+         background:white;
+}
+
+.buttonpost {
+            
+            height: 40px;
+    width: 50%;
+    outline: none;
+    border: none;
+    background-color: rgb(248,26,92);
+    color: white;
+    border-radius: 60px;
+    font-weight: 700;
+            }
+
+</style>
+
+<body>
+<div class="jumbotron text-center">
+	<h1 style="font-family: 'Lobster', cursive;color:black;">Ecommerce Food Products Sales Forecasting System</h1>
+</div>
+
+  <div class="upload">
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+        <table align="center" style="color:black">
+    
+             <tr>
+                <td style="color:black;" ><b> Product Name:</b></td>
+                <td>{{v.Productname}}</td>
+            </tr>
+    
+             <tr>
+                <td style="color:black;" ><b> Product Id:</b></td>
+                <td>{{v.Productid}}</td>
+            </tr>
+    
+             <tr>
+                <td style="color:black;" ><b> Quantity(Kg):</b></td>
+                <td>{{v.Quality}}</td>
+            </tr>
+    
+             <tr>
+                <td style="color:black;" ><b>Upload Image:</b></td>
+                <td>{{v.uploadimage}}</td>
+            </tr>
+    
+             <tr>
+                <td style="color:black;" ><b>Gram:</b></td>
+                <td>{{v.gram}}</td>
+            </tr>
+    
+             <tr>
+                <td style="color:black;" ><b> Description:</b></td>
+            <td>{{v.Description}}</td>
+            </tr>
+    
+             <tr>
+                <td style="color:black;" ><b> Amount:</b></td>
+                <td>{{v.amount}}</td>
+            </tr>
+    
+             <tr>
+                <td style="text-align:center;" colspan="2"><input type="submit" class="buttonpost" name="submit" value="Post the Food E-Shopping"></td>
+            </tr>
+    
+    
+    
+    </table>
+    </form>
+    </div>
+  </body>
+  {% endblock %}
+
+
+
+
+  

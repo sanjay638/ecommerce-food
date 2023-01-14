@@ -1,0 +1,109 @@
+{% extends 'user/userdetails.html' %}
+{% block userblock %}
+{% load static %}
+
+<style>
+  .new1{
+    background: url("{% static '32.jpg' %}")no-repeat;
+    /*background-size: 100% 100%;*/
+    background-size: cover;
+    height: 100vh;
+    background-position: 50% 50%;
+    width: 100%;
+    background-attachment: ;
+}
+.con{
+  max-width: 64em;
+   margin: auto;
+  
+}
+.btn0{
+    height: 40px;
+    width: 20%;
+    outline: none;
+    border: none;
+    background-color: rgb(248,26,92);
+    color: white;
+    border-radius: 60px;
+    font-weight: 700;
+}
+</style>
+
+
+<body>
+  <section class="new1">
+  <div class="container"> 
+<form class="con" method="POST">
+    {% csrf_token %}
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h1 style="color: rgb(10, 234, 241);">Update Our Details</h1>
+          
+          <hr>
+          </div>
+          </div>
+    
+    <div class="row mb-3">
+      <label style="color: rgb(250, 245, 247);font-family: Cooper Black;" class="col-form-label col-sm-1">Name:</label>
+      <div class="col-sm-4">
+           <input type="text" class="form-control" value="{{form.firstname}}" >
+       </div>
+    </div>
+
+   <div class="row mb-3">
+     <label style="color: rgb(247, 243, 244); font-family: Cooper Black;" class="col-form-label col-sm-1">Email Id:</label>
+     <div class="col-sm-4">
+         <input type="email" class="form-control" value="{{form.email}}" >
+     </div>
+   </div>
+
+   <div class="row mb-3">
+     <label style="color: rgb(245, 241, 242);font-family: Cooper Black;" class="col-form-label col-sm-1">Password:</label>
+     <div class="col-sm-4">
+         <input type="pwd" class="form-control" value="{{form.password}}" >
+     </div>
+   </div>
+
+   <div class="row mb-3">
+     <label style="color: rgb(247, 241, 243); font-family: Cooper Black;" class="col-form-label col-sm-1">Mobile Number:</label>
+     <div class="col-sm-4">
+         <input type="text" class="form-control" value="{{form.mobilenumber}}" >
+     </div>
+   </div>
+   
+   <div class="row mb-3">
+     <label style="color: rgb(250, 245, 247);font-family: Cooper Black;" class="col-form-label col-sm-1">DOB:</label>
+     <div class="col-sm-4">
+         <input type="text" class="form-control" value="{{form.dob}}">
+     </div>
+   </div>
+
+   <div class="row mb-3">
+     <label style="color: rgb(252, 247, 249); font-family: Cooper Black;" class="col-form-label col-sm-1">Gender:</label>
+     <div class="col-sm-4">
+         <input type="text" class="form-control" value="{{form.gender}}" >
+     </div>
+   </div>
+
+   <div class="row mb-3">
+     <label style="color: rgb(248, 244, 245); font-family: Cooper Black;" class="col-form-label col-sm-1">Address:</label>
+     <div class="col-sm-4">
+         <input type="text" class="form-control" value="{{form.address}}" >
+     </div>
+   </div>
+
+          
+            <div class="col-md-10">
+            <input type="submit" class="btn0"  class="log" values="submit" >
+            </div>
+    
+         
+ 
+</form>
+
+</div>
+</section>
+</body>
+{% endblock %}

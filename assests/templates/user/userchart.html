@@ -1,0 +1,122 @@
+{% extends 'user/userdetails.html' %}
+{% block userblock %}
+{% load static %}
+<style>
+body{
+     align-items: center;
+    }
+    .menu table{
+        width:100%;
+        text-align:top;
+
+    }
+
+    .menu table td:hover{
+         background:rgb(0,0,0);
+    }
+
+     .menu table td{
+          background: #371C1C;
+     }
+
+     .menu table,.menu table th,.menu table td {
+          border: ;
+          border-collapse: collapse;
+     }
+
+     .menu table th,.menu table  td {
+          padding: 10px;
+     }
+     .topic h1{
+           color:white;
+           padding:2px;
+           text-align:center;
+           border-style:none;
+           height:100px;
+           width:1330px;
+           float:left;
+     }
+     #chartContainer{
+            width: 900px;
+            margin-left: 365px;
+            margin-top: -354px;
+            position: fixed;
+     }
+     .sidemenu{
+     margin-top: -50px;
+     }
+
+     .new1{
+    background: url("{% static 'foodbg3.webp' %}")no-repeat;
+    /*background-size: 100% 100%;*/
+    background-size: fixed;
+    height: 100vh;
+    background-position: 50% 50%;
+    width: 100%;
+    background-attachment: fixed;
+}
+.con{
+  max-width: 64em;
+   margin: auto;
+  
+}
+</style>
+
+
+<script>
+window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title: {
+		text: "RECOMMENDATION RATING STRONG BUY"
+	},
+	data: [{
+	{% if chart_type == "bar" %}
+		type: "bar",
+	{% elif chart_type == "pie" %}
+		type: "pie",
+	{% elif chart_type == "spline" %}
+		type: "spline",
+	{% endif %}
+		startAngle: 240,
+		yValueFormatString: "##0.00\"%\"",
+		indexLabel: "{label} {y}",
+		dataPoints: [
+		{% for o in form %}
+			{y: {{o.dcount}}, label: "{{o.productname}}"},
+		{% endfor %}
+		]
+	}]
+});
+chart.render();
+
+}
+
+</script>
+
+<body>
+     <section class="new1">
+     
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h1 style="color: rgb(81, 255, 0);">Rating Details</h1>
+              
+              <hr>
+              </div>
+              </div>
+<div class="topic">
+
+
+
+<div class="sidemenu">
+    <h3 style="color:white;margin-left:60px;margin-top:80px"><a style="color:white;text-decoration: none; background-color:black;" href="{% url 'userchart' 'pie' %}" >Pie Chart</a></h3>
+    <h3 style="color:white;margin-left:60px;margin-top:100px;"><a style="color:white;text-decoration: none; background-color:black;" href="{% url 'userchart' 'bar' %}">Bar Chart</a></h3>
+    <h3 style="color:white;margin-left:60px;margin-top:100px;"><a style="color:white;text-decoration: none; background-color:black;" href="{% url 'userchart' 'coloumn' %}">Coloumn Chart</a></h3>
+</div>
+<div id="chartContainer" class="graph"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</div>
+</section>
+</body>
+{% endblock %}

@@ -1,0 +1,131 @@
+{% extends 'user/userdetails.html' %}
+{% block userblock %}
+{% load static %}
+
+<style>
+
+.new1{
+      background: url("{% static 'foodbg3.webp' %}")no-repeat;
+      /*background-size: 100% 100%;*/
+      background-size: cover;
+      height: 100vh;
+      background-position: 50% 50%;
+      width: 100%;
+      background-attachment: ;
+  }
+  .con{
+    max-width: 64em;
+     margin: auto;
+    
+  }
+
+    ol.progtrckr {
+    margin: 0;
+    padding: 0;
+    list-style-type none;
+}
+
+ol.progtrckr li {
+    display: inline-block;
+    text-align: center;
+    line-height: 3.9em;
+}
+
+ol.progtrckr[data-progtrckr-steps="2"] li { width: 49%; }
+ol.progtrckr[data-progtrckr-steps="3"] li { width: 33%; }
+ol.progtrckr[data-progtrckr-steps="4"] li { width: 24%; }
+ol.progtrckr[data-progtrckr-steps="5"] li { width: 19%; }
+ol.progtrckr[data-progtrckr-steps="6"] li { width: 16%; }
+ol.progtrckr[data-progtrckr-steps="7"] li { width: 14%; }
+ol.progtrckr[data-progtrckr-steps="8"] li { width: 12%; }
+ol.progtrckr[data-progtrckr-steps="9"] li { width: 11%; }
+
+ol.progtrckr li.progtrckr-done {
+    color: black;
+    border-bottom: 4px solid yellowgreen;
+}
+ol.progtrckr li.progtrckr-todo {
+    color: silver;
+    border-bottom: 4px solid silver;
+}
+
+ol.progtrckr li:after {
+    content: "\00a0\00a0";
+}
+ol.progtrckr li:before {
+    position: relative;
+    bottom: -2.5em;
+    float: left;
+    left: 50%;
+    line-height: 1em;
+}
+ol.progtrckr li.progtrckr-done:before {
+    content: "\2713";
+    color: white;
+    background-color: yellowgreen;
+    height: 2.2em;
+    width: 2.2em;
+    line-height: 2.2em;
+    border: none;
+    border-radius: 2.2em;
+}
+ol.progtrckr li.progtrckr-todo:before {
+    content: "\039F";
+    color: silver;
+    background-color: white;
+    font-size: 2.2em;
+    bottom: -1.2em;
+}
+.topic h1{
+          color: black;
+          background-color:none ;
+          padding:1px;
+          text-align: center;
+          border-style:none;
+          height:40px;
+          width:1330px;
+          float:left;
+
+
+          }
+          .topic2 h2{
+          color: black;
+          background-color:none ;
+          padding:1px;
+          text-align: center;
+          border-style:none;
+          height:40px;
+          width:1330px;
+          float:left;
+
+
+          }
+          .topic3 h2{
+          color: red;
+          background-color:none ;
+          padding:1px;
+          text-align: center;
+          border-style:none;
+          height:40px;
+          width:1330px;
+          float:left;
+
+
+          }
+</style>
+<body>
+    <section class="new1">
+<div class="topic"><h1 style="text-align: center;">Your order has been dispatched from the Ecommerce Food Products Sales Forecasting System </h1></div>
+<br><br><br><br><br><br>
+<div class="topic2"><h2 style="center">Standard Delivery:Tomorrow or Coming 3 or 4 days to Delivered</h2></div><br>
+<div class="topic3"><h2 style="center">Thanks For Using Ecommerce Food Products Sales Forecasting System</h2></div>
+<ol class="progtrckr" data-progtrckr-steps="5">
+    <li class="progtrckr-done">Order Processing</li><!--
+ --><li class="progtrckr-done">Pre-Production</li><!--
+ --><li class="progtrckr-done">In Production</li><!--
+ --><li class="progtrckr-done">Shipped</li><!--
+ --><li class="progtrckr-todo">Delivered</li>
+</ol>
+</section>
+</body>
+{% endblock %}

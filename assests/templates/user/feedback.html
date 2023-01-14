@@ -1,0 +1,100 @@
+{% extends 'user/userdetails.html' %}
+{% block userblock %}
+{% load static %}
+
+<style>
+  .new1{
+    background: url("{% static '32.jpg' %}")no-repeat;
+    /*background-size: 100% 100%;*/
+    background-size: cover;
+    height: 100vh;
+    background-position: 50% 50%;
+    width: 100%;
+    background-attachment: ;
+}
+.con{
+  max-width: 64em;
+   margin: auto;
+  
+}
+#con{
+  color:rgb(253, 255, 121) ;
+}
+.btn0{
+    height: 40px;
+    width: 50%;
+    outline: none;
+    border: none;
+    background-color: rgb(248,26,92);
+    color: white;
+    border-radius: 60px;
+    font-weight: 700;
+}
+</style>
+
+<body>
+  <section class="new1">
+<form id="FeedbackForm" class="form-horizontal" method="POST">
+    {% csrf_token %}
+    <div class="con"> 
+      
+      
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1 style="color: rgb(81, 255, 0);">FeedBack Form</h1>
+            
+            <hr>
+            </div>
+            </div>
+
+        <div class="form-group" id="con">
+          <label class="control-label col-sm-5">User Name:</label>
+          <div class="col-sm-4 text-center">
+            <input type="text" class="form-control" name="name" placeholder="Enter Name" autofocus>
+          </div>
+        </div>
+        
+        <div class="form-group" id="con">
+          <label class="control-label col-sm-5">Product Name:</label>
+          <div class="col-sm-4 text-center">          
+            <input type="text" class="form-control" name="productname" placeholder="Enter Product Name">
+          </div>
+        </div>
+    
+        <div class="form-group " id="con">
+              <label class="control-label col-sm-5">Recommendation Rating Strong Buy:</label>
+              <div class="col-sm-6 ">
+              <select class="form-select" name="ratings">
+                <option>--SELECT--</option> 
+                <option value="5">Verygood</option>
+                <option value="4">Good</option>
+                <option value="3">Average</option>
+                <option value="2">Worst</option>
+                <option value="1">Totallywaste</option>
+              </select>
+              </div>
+        </div>
+    
+        <div class="form-group" id="con">
+          <label class="control-label col-sm-5">FeedBack:</label>
+          <div class="col-sm-4 text-center">          
+            <textarea rows="5" cols="50"class="form-control" name="feedback" placeholder="Enter Your FeedBack"></textarea> 
+          </div>
+        </div><br><br>
+        <div class="col-md-7">
+        <button type="submit" onclick="myFunction()" class="btn0">Post a Your Feedback</button>
+        </div>
+    </div>
+    
+</form>
+<script>
+    function myFunction() {
+       alert("FeedBack Saved Successfully!...");
+       document.getElementById("FeedbackForm").submit();
+    }
+ </script>
+ </section>
+</body>
+{% endblock %}
+
+

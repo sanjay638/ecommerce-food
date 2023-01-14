@@ -1,0 +1,68 @@
+{% extends 'admin/designadmin.html' %}
+{% block adminblock %}
+{% load static %}
+<style>
+     .sidemenu{
+    border-style: ;
+    border-width: 1px;
+    width: 264px;
+    height: 450px;
+    position: absolute;
+    right: 59em;
+    top: -2em;
+    left: -50px;
+
+}
+.mainholder {
+    position: relative;
+    top: 83px;
+    left: 160px;
+}
+
+</style>
+
+<script>
+window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title: {
+		text: "RECOMMENDATION RATING STRONG BUY"
+	},
+	data: [{
+	{% if chart_type == "bar" %}
+		type: "bar",
+	{% elif chart_type == "pie" %}
+		type: "pie",
+	{% elif chart_type == "spline" %}
+		type: "spline",
+	{% endif %}
+		startAngle: 240,
+		yValueFormatString: "##0.00\"%\"",
+		indexLabel: "{label} {y}",
+		dataPoints: [
+		{% for o in form %}
+			{y: {{o.dcount}}, label: "{{o.productname}}"},
+		{% endfor %}
+		]
+	}]
+});
+chart.render();
+
+}
+
+</script>
+
+<div class="sidemenu">
+    <h2 style="color:black;margin-left:60px;margin-top:80px;"><a href="{% url 'foodchart' 'spline' %}" style="color:blue;text-decoration:none">Spline Chart</a></h2>
+    <h2 style="color:black;margin-left:60px;margin-top:100px;"><a href="{% url 'foodchart' 'bar' %}" style="color:blue;text-decoration:none">Bar Chart</a></h2>
+    <h2 style="color:black;margin-left:60px;margin-top:100px;"><a href="{% url 'foodchart' 'coloumn' %}" style="color:blue;text-decoration:none">Coloumn Chart</a></h2>
+</div>
+<div id="chartContainer" class="graph" style="height: 370px; width: 800px; margin: 0px auto;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
+
+
+
+{% endblock %}
